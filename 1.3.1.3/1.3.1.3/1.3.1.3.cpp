@@ -8,14 +8,16 @@ using namespace std;
 int main()
 {
 	setlocale(LC_ALL, "Russian");
-	double Q, T;
+	double Q,T;
 	short N;
-	cout << "введите начальную стоимость оборудования: Q,T,N: "<< endl;
-	cin >> Q >> T >> N;
+	cout << "введите начальную стоимость оборудования: Q,N: "<< endl;
+	cin >> Q >> N;
+	
 	if (N<=0) {
 		cout<<"неправильное выбран промежуток времени"<< endl;
 		return 0;
 	}
+	T = Q / N;
 	for (; N != 0; --N) {
 		Q -= T;
 		cout << Q<< endl;
